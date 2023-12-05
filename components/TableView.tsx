@@ -18,16 +18,16 @@ export default function TableView({ table, className, downloadFile, title, child
           <table className="table-auto w-full">
             <thead>
               <tr className="bg-slate-800 text-white">
-                {headers.map((header) => (
-                  <th className="px-4 py-2">{header}</th>
+                {headers.map((header,i) => (
+                  <th key={i} className="px-4 py-2">{header}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {table.map((row) => (
-                <tr className="border-b-2 border-x-2">
-                  {headers.map((key) => (
-                    <td className="px-4 py-2">{row[key]}</td>
+              {table.map((row, i) => (
+                <tr key={i} className="border-b-2 border-x-2">
+                  {headers.map((key,i) => (
+                    <td key={i} className="px-4 py-2">{row[key]}</td>
                   ))}
                 </tr>
               ))}

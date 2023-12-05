@@ -16,6 +16,7 @@ timetable-generator/node_modules
 
 # production
 /build
+timetable-generator/dist
 
 # misc
 .DS_Store
