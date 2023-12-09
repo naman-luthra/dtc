@@ -92,6 +92,7 @@ export default function Home() {
         setUnprocessedRequests(res.unprocessedRequests);
         setShowTimetable(true);
       }
+      console.log(res)
     }
     else if(mode==="group-course"){
       res = await fetch("http://localhost:8080/generate-timetable-groupcourse", {
@@ -107,6 +108,7 @@ export default function Home() {
           autoAdjust: autoAdjustLT ? ["LEC","TUT"] : []
         }),
       }).then((res) => res.json());
+      console.log(res);
       setUpdatedCourseAvailablityCSV(convertJSONToCSV(res.updatedCourseAvailablity));
       if (changes) {
         setSuggestedChanges(res.changes);
