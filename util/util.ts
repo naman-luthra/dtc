@@ -6,7 +6,7 @@
  * @returns The URI-encoded CSV content.
  */
 export function convertJSONToCSV(table: any[], headersInp?: string[]) {
-    const headers: string[] = [];
+    const headers: string[] = headersInp || [];
     if(!headersInp){
       for(const key in table[0])
         headers.push(key)

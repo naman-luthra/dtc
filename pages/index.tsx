@@ -3,6 +3,7 @@ import TableView from "@/components/TableView";
 import { convertJSONToCSV } from "@/util/util";
 import { useState } from "react";
 import { BiUpload } from "react-icons/bi";
+import { IoMdArrowRoundBack } from "react-icons/io"
 import { CourseAvailablityChange, DTCRequest, TimeTable } from "../util/types";
 import { Loading } from "@/components/Loading";
 import Head from "next/head";
@@ -69,8 +70,9 @@ export default function Home() {
       unprocessedRequests: DTCRequest[] | number;
       updatedCourseAvailablity: any[];
     };
+    const backendUri = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080"
     if(mode==="csv"){
-      res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/generate-timetable-requests`, {
+      res = await fetch(`${backendUri}/generate-timetable-requests`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +97,7 @@ export default function Home() {
       console.log(res)
     }
     else if(mode==="group-course"){
-      res = await fetch("http://localhost:8080/generate-timetable-groupcourse", {
+      res = await fetch(`${backendUri}/generate-timetable-groupcourse`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -155,7 +157,12 @@ export default function Home() {
           <Head>
             <title>DTC TimeTable generator</title>
           </Head>
-          <div className="text-center text-3xl">DTC TimeTable generator</div>
+          <div className="flex">
+            <div onClick={()=>setMode(1)} className="p-1 rounded-full border-2 hover:bg-white hover:text-black cursor-pointer">
+              <IoMdArrowRoundBack className="w-6 h-6"/>
+            </div>
+          </div>
+          <div className="text-center text-3xl mt-2">DTC TimeTable generator</div>
           <div className="flex flex-col gap-4 mt-8">
             <div className="flex justify-center gap-4">
               <div className="">
