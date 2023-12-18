@@ -170,8 +170,8 @@ export function generateTimeTable(
     for(const req of reqs){
         // filtering course availablity to get only the course instances of the requested course
         const courseInstances = courseAvailablity.filter((course) =>(
-            course.subject === req.courseno.split(' ')[0] &&
-            course.catalog === req.courseno.split(' ')[1]
+            course.subject === req?.courseno.split(' ')[0] &&
+            course.catalog === req?.courseno.split(' ')[1]
         ));
 
         // intermediate data structure to store course instances by component and section

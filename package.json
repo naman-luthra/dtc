@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "client": "npm run build && npm run start",
+    "server": "cd timetable-generator && npm start",
+    "serve": "concurrently \"npm run client\" \"npm run server\""
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
