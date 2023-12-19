@@ -1,40 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Automated Timetable Generation
+
+Streamline the process of timetable generation for educational institutions with this automated system. Reduce manual effort and optimize resource allocation efficiently.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to run the application on Windows:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Clone the Repository:
+   ```bash
+   git clone https://github.com/your-username/automated-timetable-generation.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Node.js
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- If not installed, find the Node.js installer in the "windows" folder and execute it.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Install Application Modules
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Double click the `install.bat` file in the "windows" folder to install the required Node.js modules.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Run the Application
 
-## Learn More
+- Execute the `start.bat` file to start the application.
 
-To learn more about Next.js, take a look at the following resources:
+### Open the Application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Visit [http://localhost:3000/](http://localhost:3000/) in a web browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Technologies Used
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Frontend:** Next.js, TypeScript
+- **Backend:** Node.js, TypeScript
