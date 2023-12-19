@@ -9,6 +9,7 @@ Follow these steps to run the application on Windows:
 ### Clone the Repository:
    ```bash
    git clone https://github.com/your-username/automated-timetable-generation.git
+   ```
 
 ### Install Node.js
 
@@ -20,7 +21,7 @@ Follow these steps to run the application on Windows:
 
 ### Run the Application
 
-- Execute the `start.bat` file to start the application.
+- Execute the `start.bat` file in the "windows" folder to start the application.
 
 ### Open the Application
 
