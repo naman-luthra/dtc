@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "client": "npm run start",
-    "server": "cd timetable-generator && npm start",
+    "server": "cd timetable-generator && npm run serve",
     "serve": "concurrently \"npm run client\" \"npm run server\""
   },
   "dependencies": {

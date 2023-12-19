@@ -1,1 +1,1 @@
-npm run serve
+call npm run serve
